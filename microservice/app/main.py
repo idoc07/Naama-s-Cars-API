@@ -24,5 +24,10 @@ async def print_message():
 
 @app.post('/send_greetings')
 async def send_data(info: GreetingModel):
+    """
+    Send Info
+    :param info:
+    :return:
+    """
     print(info.car_num, info.car_type, info.extended_info)
     return {"text": insert(info.car_num, info.car_type, info.extended_info)}

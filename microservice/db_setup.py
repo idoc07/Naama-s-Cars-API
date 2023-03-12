@@ -3,6 +3,10 @@ from app_config import MONGO_URI
 
 
 def status():
+    """
+    Database Setuo
+    :return:
+    """
     client = MongoClient(MONGO_URI)
     db = client.get_database("test")
     coll = db.get_collection("naama_users")
